@@ -50,7 +50,6 @@ if(Meteor.isClient){
               alert('Please enter valid Url');
             }
             else{
-              console.log("result", result);
               Meteor.call('tasks.insert', result.content, text);
             }
 
