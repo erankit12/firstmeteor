@@ -1,0 +1,21 @@
+<template name="task">
+  <li>
+    <button class="delete">&times;</button>
+    {{#if currentUser}}
+      {{#if isVoted }}
+        <button class="unVote">&nabla;</button>
+      {{else}}
+        <button class="vote">&Delta;</button>
+      {{/if}}
+    {{/if}}
+    {{#if isOwner}}
+      <button class="edit-button"> Edit</button>
+    {{/if}}
+<a href="{{url}}" target="_blank">
+    <input type="text" name="text" class="text" value="{{text}}" readonly> </a>
+    <br/><br/>
+    <span class="voteCount">Vote Count: {{voteCount}}</span>
+    <br/><br/>
+    <span class="owner">Posted By: {{username}}</span>
+  </li>
+</template>
